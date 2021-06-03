@@ -27,7 +27,7 @@ body {
 @media only screen and (max-width: 500px) {
   .container {
     display: grid;
-    grid-template-columns: 100%; /* 1fr is akward with only 1 row*/
+    grid-template-columns: 1fr; 
     grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
     grid-gap: 16px;
     grid-template-areas:
@@ -35,7 +35,7 @@ body {
       "elementB"
       "elementC"
       "elementD"
-      "elemente"
+      "elementE"
       "."
       "footer";
     background-color: #ffeedb;
