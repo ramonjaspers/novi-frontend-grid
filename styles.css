@@ -1,1 +1,52 @@
-/*Maak hier jouw CSS!*/
+body {
+  background-color: #ffeedb;
+  text-transform: capitalize;
+}
+
+#elementA {grid-area: elementA;}
+#elementB {grid-area: elementB;}
+#elementC {grid-area: elementC;}
+#elementD {grid-area: elementD;}
+#elementE {grid-area: elementE;}
+#footer {grid-area: footer;}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 150px 100px auto 50px;
+  grid-gap: 16px;
+  grid-template-areas:
+    "elementA elementC elementC"
+    "elementB elementC elementC"
+    "elementB elementE elementD"
+    "elementB elementE ."
+    "footer footer footer";
+  background-color: #ffeedb;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-gap: 16px;
+    grid-template-areas:
+      "elementA"
+      "elementB"
+      "elementC"
+      "elementD"
+      "elementE"
+      "."
+      "footer";
+    background-color: #ffeedb;
+  }
+}
+
+.container > div {
+  color: #ffffff;
+  border: solid 2px #a1333c;
+  background-color: #ba3a45;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
